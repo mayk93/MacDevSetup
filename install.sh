@@ -46,4 +46,12 @@ echo
 # ===== ===== ===== ===== =====
 
 bash BrewSetup/install_brew.sh
+bash PostBrewSetup/install.sh
 sudo bash DefaultsSetup/install_defaults.sh
+
+# Change the shell
+chsh -s $(which zsh)
+
+echo Should all be done! Get ready to code! 👨‍💻
+echo —-—===——-
+echo
