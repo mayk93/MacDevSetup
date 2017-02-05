@@ -17,3 +17,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
   cd fonts
   ./install.sh
   cd $CURRENT_DIR
+
+  # Now move the custom settings
+  python PostBrewSetup/generate_zsh.py --user $(echo ~)
+  cp ./.zshrc ~/

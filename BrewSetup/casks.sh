@@ -8,6 +8,7 @@
 brew cask install atom
 brew cask install pycharm
 brew cask install unity
+brew cask install xcode
 # Utilities
 brew cask install iterm2
 brew cask install tunnelblick
@@ -17,6 +18,7 @@ brew cask install google-chrome
 brew cask install torbrowser
 # Communication
 brew cask install skype
+brew cask install slack
 # Fun
 brew cask install steam
 brew cask install vlc

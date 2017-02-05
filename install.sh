@@ -17,6 +17,7 @@ echo
 USERNAME=$1
 USERNAME_SIZE=${#USERNAME}
 MIN_USERNAME_SIZE=3
+COMPUTER_NAME="$(tr '[:lower:]' '[:upper:]' <<< ${USERNAME:0:1})${USERNAME:1}sMBP"
 if [ "$USERNAME_SIZE" -lt "$MIN_USERNAME_SIZE" ]; then
   echo You must have a username that is at least $MIN_USERNAME_SIZE letters in length
   exit
@@ -30,9 +31,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo Changing Hostname
 echo
-sudo scutil --set ComputerName $USERNAME
-sudo scutil --set HostName $USERNAME
-sudo scutil --set LocalHostName $USERNAME
+sudo scutil --set ComputerName $COMPUTER_NAME
+sudo scutil --set HostName $COMPUTER_NAME
+sudo scutil --set LocalHostName $COMPUTER_NAME
 
 echo You will also need to download xcode
 xcode-select --install
@@ -50,7 +51,10 @@ bash PostBrewSetup/install.sh
 sudo bash DefaultsSetup/install_defaults.sh
 
 # Change the shell
-chsh -s $(which zsh)
+sudo chsh -s /usr/local/bin/zsh $USERNAME
+touch ~/.bash_profile
+echo 'export SHELL=$(which zsh)' >> ~/.bash_profile
+echo 'exec $(which zsh) -l' >> ~/.bash_profile
 
 echo Should all be done! Get ready to code! 👨‍💻
 echo —-—===——-
