@@ -13,6 +13,7 @@ brew cask install xcode
 brew cask install iterm2
 brew cask install tunnelblick
 brew cask install virtualbox
+brew cask install gpg
 # Browsers
 brew cask install google-chrome
 brew cask install torbrowser

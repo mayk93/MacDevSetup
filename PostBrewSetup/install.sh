@@ -21,3 +21,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
   # Now move the custom settings
   python PostBrewSetup/generate_zsh.py --user $(echo ~)
   cp ./.zshrc ~/
+
+  python PostBrewSetup/fix_wd_terminal_settings.py --user $(echo ~)
