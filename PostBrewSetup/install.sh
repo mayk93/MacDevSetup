@@ -20,6 +20,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
   # Now move the custom settings
   python PostBrewSetup/generate_zsh.py --user $(echo ~)
-  cp ./.zshrc ~/
+  cp PostBrewSetup/.zshrc ~/
 
   python PostBrewSetup/fix_wd_terminal_settings.py --user $(echo ~)
+
+bash install_apms.sh
+bash install_vim.sh
