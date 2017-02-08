@@ -172,4 +172,4 @@ noremap  <Leader>g :GitGutterToggle<CR>
 " this machine config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
-endifs
+endif
