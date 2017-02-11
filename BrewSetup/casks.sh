@@ -20,6 +20,9 @@ brew cask install torbrowser
 # Communication
 brew cask install skype
 brew cask install slack
+# Financial
+brew cask install electrum
+brew cask install ethereum-wallet
 # Fun
 brew cask install steam
 brew cask install vlc
