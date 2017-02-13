@@ -24,7 +24,10 @@ brew install yarn
 brew install go
 # Rust
 brew install rust
+# Mongo
+brew install mongo
 # Other
+brew install autojump
 brew install wget
 brew install tree
 brew install tor
