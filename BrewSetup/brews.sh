@@ -28,6 +28,7 @@ brew install rust
 brew install mongo
 # Other
 brew install autojump
+brew install awscli
 brew install wget
 brew install tree
 brew install tor
