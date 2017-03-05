@@ -16,6 +16,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
   git clone https://github.com/powerline/fonts.git
   cd fonts
   ./install.sh
+  cd ~/.oh-my-zsh/custom/plugins
+  git clone git://github.com/zsh-users/zsh-autosuggestions
   cd $CURRENT_DIR
 
   # Now move the custom settings
